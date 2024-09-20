@@ -11,7 +11,13 @@ fn main() {
     println!("y = {}", y);
     let x = func4(5);
     println!("x = {}", x);
-}
+    
+    func5(20);
+
+    let condition = true;
+    let number = if condition { 5 } else { 6 };
+    println!("number = {}", number)
+    }
 
 fn func1(){
     println!("func1");
@@ -27,4 +33,14 @@ fn func3(x: i32,unit_label: char){
 
 fn func4(x: i32) -> i32 {
     x * 5
+}
+
+fn func5(x: i32) {
+    if x % 5 == 0 {
+        println!("{} is divisible by 5", x);
+    } else if x % 6 == 0 {
+        println!("{} is not divisible by 6", x);
+    }else {
+        println!("{} is neither divisible by 5 nor by 6", x);
+    }
 }
